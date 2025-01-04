@@ -14,3 +14,6 @@ $ npm i styled-reset
 $ npm i styled-component@6.0.7
 $ npm i @types/styled-components -D
 ```
+
+
+## 2-1. Routing
