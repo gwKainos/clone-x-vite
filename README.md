@@ -23,3 +23,5 @@ $ npm i @types/styled-components -D
 ```shell
 $ npm install firebase@10.1.0
 ```
+
+## 3-0. Setup
