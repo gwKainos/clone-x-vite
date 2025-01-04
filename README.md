@@ -18,3 +18,8 @@ $ npm i @types/styled-components -D
 ## 2-1. Routing
 
 ## 2-2. LoadingScreen
+
+## 2-3. Firebase Project
+```shell
+$ npm install firebase@10.1.0
+```
