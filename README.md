@@ -40,3 +40,5 @@ $ npm install firebase@10.1.0
 ## 3-5. Github Login
 https://github.com/settings/developers -> New OAuth App
 https://console.firebase.google.com/ -> Authentication -> 새 공급업체 추가
+
+## 3-6. Recap
