@@ -32,3 +32,5 @@ $ npm install firebase@10.1.0
 ## 3-1. Forms and UI
 
 ## 3-2. Create Account
+
+## 3-3. Protected Routes
