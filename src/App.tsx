@@ -1,14 +1,15 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "./routes/home.tsx";
-import Layout from "./conponets/layout.tsx";
-import Profile from "./routes/profile.tsx";
-import Login from "./routes/login.tsx";
-import CreateAccount from "./routes/create-account.tsx";
-import {createGlobalStyle} from "styled-components";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Layout from "./components/layout";
+import Home from "./routes/home";
+import Profile from "./routes/profile";
+import Login from "./routes/login";
+import CreateAccount from "./routes/create-account";
+import { createGlobalStyle, styled } from "styled-components";
 import reset from "styled-reset";
-import {useEffect, useState} from "react";
-import LoadingScreen from "./conponets/loading-screen.tsx";
-import {auth} from "./firebase.ts";
+import { useEffect, useState } from "react";
+import LoadingScreen from "./components/loading-screen";
+import { auth } from "./firebase";
+
 
 const router = createBrowserRouter([
   {
@@ -17,22 +18,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home/>
+        element: <Home/>,
       },
       {
         path: "profile",
-        element: <Profile/>
-      }
-    ]
+        element: <Profile/>,
+      },
+    ],
   },
   {
     path: "/login",
     element: <Login/>,
   },
   {
-    path: "create-account",
-    element: <CreateAccount/>
-  }
+    path: "/create-account",
+    element: <CreateAccount/>,
+  },
 ]);
 
 const GlobalStyles = createGlobalStyle`
@@ -42,12 +43,16 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: black;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacStyleFont, 'Sagoe UI',
-    "Roboto Thin", Oxygen, Ubuntou, Cantarell, 'Open Sans', 'Helvetica Neue',
-    sans-serif;
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-`
+`;
+
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,11 +64,11 @@ function App() {
     init();
   }, [])
   return (
-      <>
+      <Wrapper>
         <GlobalStyles />
         {isLoading ? <LoadingScreen /> : <RouterProvider router={router} />}
-      </>
-  )
+      </Wrapper>
+  );
 }
 
 export default App

@@ -7,6 +7,9 @@ $ npm create vite@latest
 > TypeScript + SWC
 ```
 
+## 주의사항
+firebase.ts 파일 내 설정 정보를 입력하고 실행 할 것.
+
 ## 2-0. Installation
 ```shell
 $ npm i react-router-dom@6.14.2
@@ -25,3 +28,5 @@ $ npm install firebase@10.1.0
 ```
 
 ## 3-0. Setup
+
+## 3-1. Forms and UI
