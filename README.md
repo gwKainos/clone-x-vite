@@ -46,3 +46,5 @@ https://console.firebase.google.com/ -> Authentication -> 새 공급업체 추�
 ## 4-0. Navigation Bar
 
 ## 4-1. Post Tweet Form
+
+## 4-2. Tweeting to Firestore
